@@ -11,9 +11,9 @@ class Genre
     @@all
   end
   
-  def songs 
-    Song.all.select do |song|
-      song.genre == self
+  def appointments
+    Appointment.all.select do |appointment|
+      appointment.genre == self
     end
   end
   
