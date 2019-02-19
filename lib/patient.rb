@@ -22,4 +22,8 @@ class Genre
       song.artist
     end
   end
+  
+  def new_appointment(doctor, date)
+    Appointment.new(date, self, self)
+  end
 end
