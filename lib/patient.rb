@@ -1,5 +1,5 @@
-class Genre
-  attr_reader :name, :genre, :artist
+class Patient
+  attr_reader :name
   @@all = []
   
   def initialize(name)
@@ -17,9 +17,9 @@ class Genre
     end
   end
   
-  def artists
-    self.songs.map do |song|
-      song.artist
+  def doctor
+    self.appointments.map do |appointment|
+      appointment.doctor
     end
   end
   
