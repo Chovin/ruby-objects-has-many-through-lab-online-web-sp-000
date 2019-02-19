@@ -13,17 +13,17 @@ class Doctor
   
   def appointment
     Appointment.all.select do |appointment|
-      song.artist == self
+      appointment.patient == self
     end
   end
   
   def genres
-    self.appointment.map do |song|
-      song.genre
+    self.appointment.map do |appointment|
+      appointment.genre
     end
   end
   
-  def new_appointment(name, genre)
-    Appointment.new(name, self, genre)
+  def new_appointment(name, patient)
+    Appointment.new(name, self, patient)
   end
 end
