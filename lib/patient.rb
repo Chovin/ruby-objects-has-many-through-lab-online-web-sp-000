@@ -13,7 +13,7 @@ class Genre
   
   def appointments
     Appointment.all.select do |appointment|
-      appointment.genre == self
+      appointment.patient == self
     end
   end
   
