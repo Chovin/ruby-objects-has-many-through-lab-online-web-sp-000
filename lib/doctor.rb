@@ -17,9 +17,9 @@ class Doctor
     end
   end
   
-  def genres
+  def patients
     self.appointment.map do |appointment|
-      appointment.genre
+      appointment.patients
     end
   end
   
